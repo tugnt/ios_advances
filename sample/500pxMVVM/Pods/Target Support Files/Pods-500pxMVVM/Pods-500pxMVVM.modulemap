@@ -1,0 +1,6 @@
+framework module Pods_500pxMVVM {
+  umbrella header "Pods-500pxMVVM-umbrella.h"
+
+  export *
+  module * { export * }
+}
