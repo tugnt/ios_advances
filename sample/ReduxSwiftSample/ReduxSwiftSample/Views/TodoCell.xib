@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="36" id="KGk-i7-Jjw" customClass="TodoCell" customModule="ReduxSwiftSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJ6-5n-Kbw">
+                        <rect key="frame" x="9" y="14" width="272" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="272" id="1wI-ag-ycV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-Se-7tj">
+                        <rect key="frame" x="289" y="9" width="45" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="9Q1-uI-pMp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="Delete"/>
+                        <connections>
+                            <action selector="removeDidSelect:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8lI-gu-cVj"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oJ6-5n-Kbw" firstAttribute="centerY" secondItem="Hyb-Se-7tj" secondAttribute="centerY" id="7an-wZ-nAU"/>
+                    <constraint firstItem="oJ6-5n-Kbw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="H48-6L-2mm"/>
+                    <constraint firstItem="Hyb-Se-7tj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RhR-u2-PBX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hyb-Se-7tj" secondAttribute="trailing" constant="-7" id="Sld-Ow-tql"/>
+                    <constraint firstItem="oJ6-5n-Kbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-7" id="X1u-QG-Hum"/>
+                    <constraint firstItem="Hyb-Se-7tj" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="jIU-lF-nHa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="removeTaskButton" destination="Hyb-Se-7tj" id="lb1-hR-9gQ"/>
+                <outlet property="todoNameLabel" destination="oJ6-5n-Kbw" id="jvh-Sa-E8J"/>
+            </connections>
+            <point key="canvasLocation" x="-13.5" y="13"/>
+        </tableViewCell>
+    </objects>
+</document>
